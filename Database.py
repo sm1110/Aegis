@@ -1,7 +1,7 @@
 import sqlite3
 
 
-DB_FILE = "securevault.db"
+DB_FILE = "aegis.db"
 
 class Database:
     #Create Database and Tables
@@ -12,7 +12,7 @@ class Database:
                             CREATE TABLE IF NOT EXISTS settings (
                             id INTEGER PRIMARY KEY,
                             salt BLOB NOT NULL,
-                            verified BLOB NOT NULL)
+                            verifier BLOB NOT NULL)
                           ''')
 
         self.conn.execute('''
